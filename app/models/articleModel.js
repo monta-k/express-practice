@@ -8,7 +8,7 @@ var ArticleSchema = new Schema({
   data: String
 })
 
-ArticleSchema.methods.setData = function () {
+ArticleSchema.methods.setDate = function () {
   this.data = moment().format("YYYY-MM-DD HH:mm:ss")
 }
 
