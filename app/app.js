@@ -4,7 +4,7 @@ var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb:localhost:27017/ExpressAPI')
+mongoose.connect('mongodb://localhost:27017/ExpressAPI', {useNewUrlParser: true})
 mongoose.connection.on('error', function(err) {
   console.error('MongoDB connection error ' + err)
   process.exit(-1)
